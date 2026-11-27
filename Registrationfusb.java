@@ -1,0 +1,51 @@
+import javax.swing.*;
+import java.awt.*;
+public class Registrationfusb {
+    public static void main(String[] args) {
+        JFrame f1=new JFrame("Registration");
+        f1.setSize(300,300);
+        f1.setLayout(null);
+        JLabel l1=new JLabel("Name:");
+        l1.setBounds(10,10,150,20);
+        JTextField t1=new JTextField();
+        t1.setBounds(70,10,150,20);
+        f1.add(l1);f1.add(t1);
+        JLabel l2=new JLabel("Gender:");
+        l2.setBounds(10,50,150,20);
+        JRadioButton b1=new JRadioButton("Male");
+        b1.setBounds(70,50,70,20);
+        JRadioButton b2=new JRadioButton("Female");
+        b2.setBounds(130,50,90,20);
+        JRadioButton b3=new JRadioButton("Other");
+        b3.setBounds(200,50,70,20);
+        ButtonGroup bg=new ButtonGroup();
+        bg.add(b1);bg.add(b2);bg.add(b3);
+        f1.add(l2);f1.add(b1);f1.add(b2);f1.add(b3);
+        JLabel l3=new JLabel("Hobbies:");
+        l3.setBounds(10,90,150,20);
+        JCheckBox c1=new JCheckBox("Singing");
+        c1.setBounds(70,90,120,20);
+        JCheckBox c2=new JCheckBox("Dancing");
+        c2.setBounds(150,90,120,20);
+        JCheckBox c3=new JCheckBox("Playing");
+        c3.setBounds(230,90,120,20);
+        f1.add(l3);f1.add(c1);f1.add(c2);f1.add(c3);
+        JLabel l4=new JLabel("Country:");
+        l4.setBounds(10,130,150,20);
+        String []country={"United States","Nepal","UK","Japan","Korea","Dubai","Qatar"};
+        JComboBox co=new JComboBox(country);
+        co.setBounds(100,130,150,20);
+        f1.add(l4);f1.add(co);
+        JLabel l5=new JLabel("About You:");
+        l5.setBounds(10,170,150,20);
+        JTextArea a1=new JTextArea();
+        a1.setBounds(100,170,200,70);
+        f1.add(l5);f1.add(a1);
+        JButton bt1=new JButton("Register");
+        bt1.setBounds(60,250,100,30);
+        JButton bt2=new JButton("Clear");
+        bt2.setBounds(170,250,100,30);
+        f1.add(bt1);f1.add(bt2);
+        f1.setVisible(true);
+    }
+}
